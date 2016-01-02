@@ -1,0 +1,11 @@
+RemoteSystemsTempFiles
+target
+.DS_Store
+.brackets.json
+.classpath
+.metadata
+.project
+.settings
+.vlt
+.vlt-sync.log
+.vlt-sync-config.properties

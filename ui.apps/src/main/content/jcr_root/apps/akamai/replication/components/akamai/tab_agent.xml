@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Settings">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <text
+            jcr:primaryType="cq:Widget"
+            fieldDescription="informative name of this agent"
+            fieldLabel="Name"
+            name="./jcr:title"
+            xtype="textfield"/>
+        <description
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Description"
+            name="./jcr:description"
+            xtype="textarea"/>
+        <enabled
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Enabled"
+            inputValue="true"
+            name="./enabled"
+            xtype="checkbox"/>
+        <enabledClear
+            jcr:primaryType="cq:Widget"
+            inputValue="x"
+            name="./enabled@Delete"
+            xtype="hidden"/>
+        <serType
+            jcr:primaryType="cq:Widget"
+            value="akamai"
+            defaultValue="akamai"
+            name="./serializationType"
+            xtype="hidden"/>
+        <retryDelay
+            jcr:primaryType="cq:Widget"
+            fieldDescription="time in milliseconds"
+            fieldLabel="Retry Delay"
+            name="./retryDelay"
+            xtype="textfield"/>
+        <userId
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Leave empty to use system user. This user's keystore will be used for SSL connections."
+            fieldLabel="Agent User Id"
+            name="./userId"
+            xtype="textfield"/>
+        <logLevel
+            jcr:primaryType="cq:Widget"
+            defaultValue="error"
+            fieldLabel="Log Level"
+            name="./logLevel"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <error
+                    jcr:primaryType="nt:unstructured"
+                    text="Error"
+                    value="error"/>
+                <info
+                    jcr:primaryType="nt:unstructured"
+                    text="Info"
+                    value="info"/>
+                <debug
+                    jcr:primaryType="nt:unstructured"
+                    text="Debug"
+                    value="debug"/>
+            </options>
+        </logLevel>
+    </items>
+</jcr:root>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Transport">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <uri
+            jcr:primaryType="cq:Widget"
+            fieldLabel="URIs"
+            fieldDescription="protocol &quot;akamai://&quot; required"
+            value="akamai://api.ccu.akamai.com/ccu/v2/queues/default"
+            defaultValue="akamai://api.ccu.akamai.com/ccu/v2/queues/default"
+            readOnly="{Boolean}true"
+            name="./transportUri"
+            xtype="textfield"/>
+        <user
+            jcr:primaryType="cq:Widget"
+            fieldDescription="user name for the transport credentials"
+            fieldLabel="User"
+            name="./transportUser"
+            xtype="textfield"/>
+        <password
+            jcr:primaryType="cq:Widget"
+            fieldDescription="password for the transport credentials"
+            fieldLabel="Password"
+            name="./transportPassword"
+            xtype="password"/>
+        <ntlmdomain
+            jcr:primaryType="cq:Widget"
+            fieldDescription="domain for NTLM authentication. eg: WORKGROUP"
+            fieldLabel="NTLM Domain"
+            name="./transportNTLMDomain"
+            xtype="textfield"/>
+        <ntlmhost
+            jcr:primaryType="cq:Widget"
+            fieldDescription="(this) host for NTLM authentication. eg: server01"
+            fieldLabel="NTLM Host"
+            name="./transportNTLMHost"
+            xtype="textfield"/>
+        <ssl
+            jcr:primaryType="cq:Widget"
+            defaultValue="default"
+            fieldLabel="SSL"
+            name="./ssl"
+            type="select"
+            xtype="selection">
+            <options jcr:primaryType="cq:WidgetCollection">
+                <default
+                    jcr:primaryType="nt:unstructured"
+                    qtip="Select to use default settings."
+                    text="Default"
+                    value="default"/>
+                <relaxed
+                    jcr:primaryType="nt:unstructured"
+                    qtip="Select to accept self-certified SSL certificates."
+                    text="Relaxed"
+                    value="relaxed"/>
+                <clientauth
+                    jcr:primaryType="nt:unstructured"
+                    qtip="Select to enable SSL client authentication."
+                    text="Client Auth"
+                    value="clientauth"/>
+            </options>
+        </ssl>
+        <sslexpired
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Enable to accept expired SSL certificates in Relaxed SSL mode."
+            fieldLabel="Allow expired certs"
+            inputValue="true"
+            name="./protocolHTTPExpired"
+            xtype="checkbox"/>
+        <sslexpiredClear
+            jcr:primaryType="cq:Widget"
+            inputValue="x"
+            name="./protocolHTTPExpired@Delete"
+            xtype="hidden"/>
+    </items>
+</jcr:root>
