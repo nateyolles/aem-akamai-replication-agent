@@ -5,7 +5,7 @@
     <items jcr:primaryType="cq:WidgetCollection">
         <uri
             jcr:primaryType="cq:Widget"
-            fieldLabel="URIs"
+            fieldLabel="URI"
             fieldDescription="protocol &quot;akamai://&quot; required"
             value="akamai://api.ccu.akamai.com/ccu/v2/queues/default"
             defaultValue="akamai://api.ccu.akamai.com/ccu/v2/queues/default"

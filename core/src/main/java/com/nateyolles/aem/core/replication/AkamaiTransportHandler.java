@@ -155,7 +155,7 @@ public class AkamaiTransportHandler implements TransportHandler {
     private ReplicationResult doActivate(TransportContext ctx, ReplicationTransaction tx)
             throws ReplicationException {
 
-    	final ReplicationLog log = tx.getLog();
+        final ReplicationLog log = tx.getLog();
         final HttpPost request = new HttpPost(AKAMAI_CCU_REST_API_URL);
 
         createPostBody(request, ctx, tx);
