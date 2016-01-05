@@ -1,6 +1,6 @@
 # AEM Custom Akamai Replication Agent
 
-This project is a demonstration on how to create a custom replication agent in Adobe Experience Manager.
+This project is a demonstration on how to create a custom replication agent in Adobe Experience Manager. The full description can be found at [http://www.nateyolles.com/blog/2016/01/aem-akamai-custom-replication-agent](http://www.nateyolles.com/blog/2016/01/aem-akamai-custom-replication-agent).
 
 ## Modules
 
@@ -11,7 +11,7 @@ The main parts of the template are:
 
 ## Requirements
 
-The project was created and tested with the listed requirements although it can be altered to for other versions.
+The project was created and tested with the listed requirements although it can easily be altered to work with other versions.
 
 * Java 1.7
 * AEM 6.1
