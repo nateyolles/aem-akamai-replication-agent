@@ -30,7 +30,7 @@ Or to deploy it to a publish instance, run
 
     mvn clean install -PautoInstallPackagePublish
     
-Or to deploy only the bundle to the author, run
+Or to deploy only the bundle to the author, run the following
 
     mvn clean install -PautoInstallBundle
 
