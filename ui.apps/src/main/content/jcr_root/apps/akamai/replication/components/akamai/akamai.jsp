@@ -21,7 +21,7 @@
                     com.day.cq.replication.AgentConfig,
                     com.day.cq.replication.AgentManager,
                     com.day.cq.replication.ReplicationQueue,
-                    com.day.cq.widget.HtmlLibraryManager,
+                    com.adobe.granite.ui.clientlibs.HtmlLibraryManager,
                     com.day.cq.i18n.I18n" %><%
 %><%@include file="/libs/foundation/global.jsp"%><%
     I18n i18n = new I18n(slingRequest);
